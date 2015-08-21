@@ -30,7 +30,7 @@
                     android:text="전체"
                     android:textSize="16sp"
                     android:gravity="center"
-                    />
+                    android:id="@+id/totla" />
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="100dip"
