@@ -16,6 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".action_bar"
+            android:label="@string/title_activity_action_bar" >
+        </activity>
     </application>
 
 </manifest>
