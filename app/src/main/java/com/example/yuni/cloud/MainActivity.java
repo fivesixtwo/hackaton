@@ -1,9 +1,11 @@
 package com.example.yuni.cloud;
 
+import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -11,6 +13,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        UniDevFileData thisFolder = new UniDevFileData("/storage/extSdCard/");
+        TextView textview = (TextView)findViewById(R.id.list);
+        textview.setText(thisFolder.files.get(0).path+"\n");
+        for (int i = 1; i < thisFolder.files.size(); i++){
+            textview.append(thisFolder.files.get(i).path+"\n");
+        }
     }
 
     @Override
